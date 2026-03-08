@@ -3,4 +3,5 @@
             <a href="{{ route('home.index') }}">home</a>
             <a href="{{ route('about.index') }}">about</a>
             <a href="{{ route('contact.index') }}">contact</a>
+
         </nav>
