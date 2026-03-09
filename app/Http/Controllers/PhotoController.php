@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
  use App\Models\Photo;
-
+// use Illuminate\Container\Attributes\Storage;
+use Illuminate\Support\Facades\Storage;
 
 class PhotoController extends Controller
 {
@@ -38,6 +39,12 @@ public function destroy($id)
 Photo::findOrFail($id)->delete();
 
 return redirect()->route('gallery');
+Storage::disk('public')->delete($path);
+// $photo = Photo::findOrFail($id);
+// Storage::delete('public/'.$photo->image);
+// $photo->delete();
+// return redirect()->route('gallery');
+
 
 }
 
