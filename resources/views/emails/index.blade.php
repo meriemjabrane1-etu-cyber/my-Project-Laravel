@@ -67,7 +67,7 @@
 <body>
 <div style="max-width: 900px; margin: 0 auto; padding: 40px 24px;">
 
-   
+
     <div style="margin-bottom: 40px;">
         <div style="display:flex; align-items:center; gap:12px; margin-bottom:4px;">
             <span style="font-size:26px;">📬</span>
@@ -192,6 +192,7 @@
                             <span class="mono" style="font-size:10px; color:#2ED573; letter-spacing:1px;">✓ READ</span>
                         @endif
                     </div>
+
                     <p style="color:#666; font-size:13px; margin:0 0 4px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
                         {{ $email->message }}
                     </p>

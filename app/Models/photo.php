@@ -11,5 +11,7 @@ class photo extends Model
         'image',
         'photographer_name',
         'type'
+         
     ];
 }
+
