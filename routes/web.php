@@ -6,7 +6,8 @@ use App\Http\Controllers\homeCntroler;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\PhotoController;
-
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\TeacherController;
 use Illuminate\View\View;
 
 Route::get('/', function () {
@@ -27,6 +28,9 @@ Route::get('/emails', [EmailController::class, 'index'])->name('email.index');
 Route::post('/email/store', [EmailController::class, 'store'])->name('email.store');
 Route::delete('/email/destroy/{email}', [EmailController::class, 'destroy'])->name('email.destroy');
 Route::patch('/email/toggle/{email}', [EmailController::class, 'toggleRead'])->name('email.toggle');
+Route::resource('/courses', CourseController::class);
+
+Route::resource('/teachers', TeacherController::class);
 Route::get('/', function () {
 
     return view('home');

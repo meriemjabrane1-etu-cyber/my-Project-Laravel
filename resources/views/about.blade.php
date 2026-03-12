@@ -17,7 +17,7 @@
               3ala9at Record we7da m3a record wa7ed <ex> User 3ando Phone wa7ed use App\Models\Phone;
 
                                                           class User extends Model
-                                                         {
+                                                        {
                                                               public function phone()
                                                             {
                                                               return $this->hasOne(Phone::class);
@@ -140,6 +140,7 @@
 
                 *ok db nxer7o xno tidiro had relation shep
               --}}
+
 
     </div>
 @endsection
